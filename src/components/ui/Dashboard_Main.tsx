@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../../public/image.png";
+import image from "../../public/Image.png";
 import pdf from "../../public/pdf.png";
 import audio from "../../public/audio.png";
 import text from "../../public/text.png";
