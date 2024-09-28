@@ -1,11 +1,9 @@
+import Home from "../components/Home";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="">
-      Hello World
-      <div>
-        From Compressor
-      </div>
+      <Home />
     </div>
   );
 }
