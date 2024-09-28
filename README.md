@@ -7,7 +7,7 @@ Still Working
 
 ## Tech Stack
 
-### Next.js , React and TypeScript.
+### Next.js , TailwindCSS , React and TypeScript.
 
 ### Roadmap and Daily Task Will be Here
 
