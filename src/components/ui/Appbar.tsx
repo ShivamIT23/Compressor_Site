@@ -1,15 +1,15 @@
 export default function Appbar() {
   return (
-    <div className="h-16 w-full grid grid-cols-12 font-semibold bg-[#E4DDDD]">
-      <div className="pl-6 text-3xl col-span-6 lg:col-span-8 flex flex-col justify-center items-start">
+    <div className="h-16 w-full grid grid-cols-12 font-semibold bg-[#E4DDDD] min-h-fit">
+      <div className="pl-6 text-3xl col-span-6 lg:col-span-7 flex flex-col justify-center items-start min-h-fit">
         <div>Compressor0.1</div>
       </div>
-      <div className="text-xl col-span-6 lg:col-span-4 flex justify-around items-center relative">
-        <button className="hidden hover:underline hover:font-bold sm:flex flex-col justify-center ">Pricing</button>
-        <button className="hidden hover:underline hover:font-bold sm:flex flex-col justify-center ">Support</button>
-        <button className="hidden hover:underline hover:font-bold sm:flex flex-col justify-center ">Register</button>
-        <button className="hidden hover:underline hover:font-bold sm:flex flex-col justify-center ">Signin</button>
-        <button className="block sm:hidden absolute right-4">
+      <div className="text-xl col-span-6 lg:col-span-5 flex justify-around items-center relative min-h-fit">
+        <button className="hidden hover:underline hover:font-bold md:flex flex-col justify-center ">Pricing</button>
+        <button className="hidden hover:underline hover:font-bold md:flex flex-col justify-center ">Support</button>
+        <button className="hidden hover:underline hover:font-bold md:flex flex-col justify-center ">Register</button>
+        <button className="hidden hover:underline hover:font-bold md:flex flex-col justify-center ">Signin</button>
+        <button className="block md:hidden absolute right-4">
           {" "}
           <svg
             fill="#000000"
