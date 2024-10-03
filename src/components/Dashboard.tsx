@@ -1,7 +1,8 @@
 import Appbar from "./ui/Appbar";
 import Dashboard_Main from "./ui/Dashboard_Main";
+import FileGetter from "./ui/FileGetter";
 import Footer from "./ui/Footer";
-import Upload_Area from "./ui/Upload_Area";
+// import Upload_Area from "./ui/Upload_Area";
 
 export default function Dashboard() {
   return (
@@ -13,7 +14,7 @@ export default function Dashboard() {
           <Dashboard_Main />
         </div>
         <div className="h-5/6 min-h-fit">
-            <Upload_Area />
+            <FileGetter />
         </div>
         <div className="h-1/6 relative w-full min-h-fit">
           <Footer />

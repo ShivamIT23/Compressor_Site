@@ -1,7 +1,7 @@
 import Image from "next/image";
 import image from "../../public/Image.png";
 import pdf from "../../public/pdf.png";
-import audio from "../../public/audio.png";
+import excel from "../../public/excel.png";
 import text from "../../public/text.png";
 
 export default function Dashboard_Main() {
@@ -27,7 +27,7 @@ export default function Dashboard_Main() {
             }}
             className="text-[#971313] italic underline leading-[29px] pl-10 flex flex-col justify-center text-2xl"
           >
-            We Can Compress Your Audio File
+            We Can Compress Your Image File
           </div>
         </div>
         <div className="flex justify-start  w-full col-span-full md:col-span-6 p-10">
@@ -45,12 +45,12 @@ export default function Dashboard_Main() {
             }}
             className="text-[#971313] italic underline leading-[29px] pl-10 flex flex-col justify-center text-2xl"
           >
-            We Can Compress Your Audio File
+            We Can Compress Your PDF File
           </div>
         </div>
         <div className="flex justify-start  w-full col-span-full md:col-span-6 p-10">
           <Image
-            src={audio}
+            src={excel}
             alt="Image File"
             width={80}
             height={80}
@@ -63,7 +63,7 @@ export default function Dashboard_Main() {
             }}
             className="text-[#971313] italic underline leading-[29px] pl-10 flex flex-col justify-center text-2xl"
           >
-            We Can Compress Your Audio File
+            We Can Compress Your Excel/CSV File
           </div>
         </div>
         <div className="flex justify-start  w-full col-span-full md:col-span-6 p-10">
@@ -81,7 +81,7 @@ export default function Dashboard_Main() {
             }}
             className="text-[#971313] italic underline leading-[29px] pl-10 flex flex-col justify-center text-2xl"
           >
-            We Can Compress Your Audio File
+            We Can Compress Your Text File
           </div>
         </div>
       </div>
