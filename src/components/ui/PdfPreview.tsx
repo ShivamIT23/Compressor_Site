@@ -1,20 +1,27 @@
 import { Worker, Viewer } from "@react-pdf-viewer/core";
-import { useState } from "react";
+import "@react-pdf-viewer/core/lib/styles/index.css"; // Ensure default styles are applied
+import { useEffect, useState } from "react";
 
 export function PDFViewer({ file }: { file: File }) {
   const [pdfSrc, setPdfSrc] = useState<string | null>(null);
 
-  const reader = new FileReader();
-  reader.onload = () => {
-    setPdfSrc(reader.result as string);
-  };
-  reader.readAsDataURL(file);
+  useEffect(() => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      setPdfSrc(reader.result as string);
+    };
+    reader.readAsDataURL(file);
+  }, [file]);
 
   return (
-    <div style={{ height: "500px" }}>
+    <div className="h-full w-fullmt-5 text-center flex justify-center scale-90">
       {pdfSrc && (
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-          <Viewer fileUrl={pdfSrc} />
+          {/* Render only the PDF without additional controls */}
+          <Viewer
+            fileUrl={pdfSrc}
+            plugins={[]} // Disable all plugins if there are any
+          />
         </Worker>
       )}
     </div>
