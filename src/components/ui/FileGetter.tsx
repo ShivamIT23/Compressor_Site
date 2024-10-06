@@ -1,12 +1,17 @@
 "use client";
 
 import { ExcelPreview } from "./ExcelPreview";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PDFViewer } from "./PdfPreview";
 import Size from "./Size";
 
 export default function FileGetter() {
   const [fileContent, setFileContent] = useState<File | null>(null);
+  const [fileSize , setFileSize] = useState<number>(0);
+
+  useEffect(()=>{
+    setFileSize(fileContent ? parseFloat((fileContent.size /1024).toFixed(2)) : 0);
+  },[fileContent]);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -58,7 +63,7 @@ export default function FileGetter() {
         </div>
         <div className="h-2/6 w-5/6 mt-6 min-h-fit grid grid-cols-12">
           <div className="col-span-8">
-            <Size />
+            <Size originalSize={fileSize} />
           </div>
           <div className="col-span-4 flex flex-col justify-center text-2xl lg:stext-3xl bg-green-500 m-12 font-semibold">
             <button>Convert</button>
@@ -100,7 +105,7 @@ function FilePreview({ file }: { file: File }) {
   } else if (fileType.includes("spreadsheet") || fileType.includes("csv")) {
     return <ExcelPreview file={file} />;
   } else if (fileType.includes("text")) {
-    return <pre>{textContent !== null ? textContent : "Loading..."}</pre>;
+    return <pre className="bg-white text-black h-full min-h-fit flex flex-col justify-center">{textContent !== null ? textContent : "Loading..."}</pre>;
   } else {
     return <p>Preview not available for this file type.</p>;
   }

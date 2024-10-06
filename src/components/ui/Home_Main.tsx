@@ -6,7 +6,7 @@ export default function Home_Main() {
       WELCOME TO COMPRESSOR 0.1 WEBSITE <br /> TO START CLICK BELOW...
       </div>
       <div className="h-3/6 mt-16 text-3xl flex flex-col justify-start text-center min-h-fit">
-      <button className="bg-[#A5D1B4] mx-auto p-5 font-extrabold flex items-center hover:scale-125 md:hover:scale-150 min-h-fit" > Let&apos;s Compress <span className="text-5xl font-extrabold min-h-fit" > &#8594;</span> </button>
+      <button className="bg-[#A5D1B4] mx-auto p-5 font-extrabold flex items-center hover:scale-125 md:hover:scale-120 min-h-fit" > Let&apos;s Compress <span className="text-5xl font-extrabold min-h-fit" > &#8594;</span> </button>
       </div>
     </div>
   )
