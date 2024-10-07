@@ -31,7 +31,7 @@ export default function FileGetter() {
           <p className="mb-4">File Selected : {fileContent.name}</p>
         )}
         <div
-          className={`h-4/6 w-5/6 flex flex-col justify-center text-center bg-[#D9D9D9] rounded-[20px] overflow-auto ${
+          className={`h-4/6 w-5/6 flex flex-col justify-center text-center bg-[#D9D9D9] rounded-[20px] overflow-y-auto overflow-x-scroll flex-wrap ${
             fileContent == null && "relative"
           }`}
         >
@@ -55,7 +55,7 @@ export default function FileGetter() {
             type="file"
             onChange={handleFileUpload}
             ref={fileInputRef}
-            className={`z-30 absolute ${
+            className={`z-30 absolute  text-black font-semibold ${
               fileContent == null && "opacity-0 h-full w-full"
             } ${fileContent && "top-4 right-1/3"}`}
           />
@@ -105,7 +105,7 @@ function FilePreview({ file }: { file: File }) {
   } else if (fileType.includes("spreadsheet") || fileType.includes("csv")) {
     return <ExcelPreview file={file} />;
   } else if (fileType.includes("text")) {
-    return <pre className="bg-white text-black h-full min-h-fit flex flex-col justify-center">{textContent !== null ? textContent : "Loading..."}</pre>;
+    return <pre className="bg-white text-black flex flex-col flex-wrap justify-center">{textContent !== null ? textContent : "Loading..."}</pre>;
   } else {
     return <p>Preview not available for this file type.</p>;
   }
