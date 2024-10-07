@@ -1,4 +1,4 @@
-import Size from "./Size";
+// import Size from "./Size";
 
 export default function Upload_Area({onClick}) {
   return (
@@ -21,7 +21,7 @@ export default function Upload_Area({onClick}) {
 
         <div className="h-2/6 w-5/6 mt-6 min-h-fit grid grid-cols-12">
           <div className="col-span-8">
-            <Size />
+            {/* <Size /> */}
           </div>
           <div className="col-span-4 flex flex-col justify-center text-3xl bg-green-500 m-10 font-semibold">
               <button>Download Now</button>
